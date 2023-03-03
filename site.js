@@ -41,7 +41,48 @@ const vue_app = Vue.createApp({
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-      }
+            
+            addLike: function (movie){
+                  movie.likes ++;           
+            },
+            
+            decreaseLike: function (movie){
+                  movie.dislikes --;
+            },
+
+
+            posterClick: function (movie, index){
+                  var moviePostersLength = movie.posters.length; 
+
+                  if (movie.posterindex < 0){
+                        movie.posterindex += moviePostersLength; 
+                  }
+
+                  if (movie.posterindex < moviePostersLength - 1){
+                        movie.posterindex ++;
+                  } else {
+                        movie.posterindex = 0; 
+                  }
+                  
+                  console.log("index: " + movie.posterindex + " movie posters: " + moviePostersLength);
+            },
+
+            makeTextDate: function (movie) {
+            var date = movie.released;
+            console.log (movie.title +": " + date);
+            return moment(String(date)).format('MMMM D, YYYY');
+            },
+
+            timeText: function (movie) {
+            var time = movie.runtime;
+            return Math.floor(time / 60) + 'h ' + time % 60 + 'm';
+            },
+
+      },
+
+
+
+      
 })
 
 vue_app.mount("#vue_app")
