@@ -20,8 +20,8 @@
 // FOR STEP 16, ADD THREE OF YOUR OWN FAVORITE MOVIES WITH METADATA TO THE END OF THE JSON FILE LIST
 */
 
-
-const vue_app = Vue.createApp({
+const vue_app = new Vue({
+      el: '#vue_app',
       // This automatically imports your movies.json file and puts it into
       //   the variable: movies
       created () {
@@ -29,7 +29,8 @@ const vue_app = Vue.createApp({
                   this.movies = json
             })
       },
-      data() {
+
+data() {
         return {
             // This holds your movies.json data.
             movies: [],
@@ -41,15 +42,14 @@ const vue_app = Vue.createApp({
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-            
             addLike: function (movie){
-                  movie.likes ++;           
+                  movie.likes ++;
+           
             },
             
             decreaseLike: function (movie){
                   movie.dislikes --;
             },
-
 
             posterClick: function (movie, index){
                   var moviePostersLength = movie.posters.length; 
@@ -64,26 +64,24 @@ const vue_app = Vue.createApp({
                         movie.posterindex = 0; 
                   }
                   
-                  console.log("index: " + movie.posterindex + " movie posters: " + moviePostersLength);
-            },
+            }
+      },
 
+      filters: {
             makeTextDate: function (movie) {
-            var date = movie.released;
-            console.log (movie.title +": " + date);
-            return moment(String(date)).format('MMMM D, YYYY');
-            },
+                  var date = movie.released;
+                  console.log (movie.title +": " + date);
+                  return moment(String(date)).format('MMMM D, YYYY');
+                },
 
             timeText: function (movie) {
             var time = movie.runtime;
             return Math.floor(time / 60) + 'h ' + time % 60 + 'm';
-            },
-
-      },
-
+            }
+      }
 
 
-      
 })
-
 vue_app.mount("#vue_app")
+
 
