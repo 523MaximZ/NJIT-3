@@ -68,5 +68,51 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+
+
+      {
+            "title": "Iron Man 1",
+            "iscore": 7.9,
+            "rating": "PG-13",
+            "runtime": 126,
+            "released": [2008, 5, 2],
+            "country": "USA",
+            "posters": ["img/ironman1.jpg", "img/ironman2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0371746/?ref_=tt_mv_close",
+            "website": "https://www.marvel.com/characters/iron-man-tony-stark",
+            "likes": 308,
+            "dislikes": 93,
+            "posterindex": 0
+      },
+
+      {
+            "title": "Cocaine Bear",
+            "iscore": 6.4,
+            "rating": "R",
+            "runtime": 195,
+            "released": [2023, 7, 24],
+            "country": "USA",
+            "posters": ["img/bear1.jpg", "img/bear2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt14209916/?ref_=nv_sr_srsg_0",
+            "website": "https://www.cocainebear.movie/",
+            "likes": 232,
+            "dislikes": 83,
+            "posterindex": 0
+      },
+
+      {
+            "title": "Top Gun: Maverick",
+            "iscore": 8.3,
+            "rating": "PG-13",
+            "runtime": 130,
+            "released": [2022, 5, 27],
+            "country": "USA",
+            "posters": ["img/maverick1.jpg", "img/maverick2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt1745960/",
+            "website": "https://www.topgunmovie.com/",
+            "likes": 420,
+            "dislikes": 143,
+            "posterindex": 0
       }
 ]

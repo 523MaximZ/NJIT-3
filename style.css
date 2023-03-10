@@ -22,7 +22,10 @@ body {
     background-color: #f2f2f2;
     padding: 40px 0;
 }
-
+.poster{
+    height: 750px;
+    width: 500px;
+}
 /* This stylizes the poster area and poster images */
 .thumbnail {
     border: 0px;
@@ -78,6 +81,7 @@ body {
     top: 50px;
     right: 25px;
     border-radius: 50%;
+    margin-right: 11%;
 }
 
 /* This contains your like and dislike buttons */
@@ -141,4 +145,8 @@ body {
 .dislikes:hover {
     background: #fdd6d6;
     color: #F65A5B;
+}
+
+.app_title{
+    text-align: center;
 }
